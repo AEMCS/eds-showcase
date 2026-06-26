@@ -19,5 +19,6 @@ export default function decorate(block) {
     moveInstrumentation(img, optimizedPic.querySelector('img'));
     img.closest('picture').replaceWith(optimizedPic);
   });
-  block.replaceChildren(ul);
+  block.textContent = '';
+  block.append(ul);
 }

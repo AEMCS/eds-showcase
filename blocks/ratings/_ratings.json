@@ -1,0 +1,105 @@
+{
+  "definitions": [
+    {
+      "title": "ratings",
+      "id": "ratings",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "ratings",
+              "model": "ratings"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "ratings",
+      "fields": [
+        {
+          "component": "tab",
+          "name": "kritiqueTab",
+          "label": "Kritique"
+        },
+        {
+          "component": "select",
+          "name": "classes_kritique",
+          "label": "Kritique Variation",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "SummaryWidget",
+              "value": "summarywidget"
+            },
+            {
+              "name": "ReadPanelWidget",
+              "value": "readpanelwidget"
+            },
+            {
+              "name": "OnlyStarsWidget",
+              "value": "onlystarswidget"
+            }
+          ]
+        },
+
+        {
+          "component": "tab",
+          "name": "bazaarvoiceTab",
+          "label": "BazaarVoice"
+        },
+        {
+          "component": "select",
+          "name": "classes_bazaarvoice",
+          "label": "BazaarVoice Variation",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "InlineRating",
+              "value": "inlinerating"
+            },
+            {
+              "name": "RatingsAndReviews",
+              "value": "ratingsandreviews"
+            },
+            {
+              "name": "SummaryContainer",
+              "value": "summarycontainer"
+            },
+            {
+              "name": "FeaturedReview",
+              "value": "featuredreview"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_seo",
+          "label": "Enable SEO",
+          "valueType": "string",
+          "value": "seo-disabled",
+          "condition": {
+            "key": "classes_bazaarvoice",
+            "value": "summarycontainer"
+          },
+          "options": [
+            {
+              "name": "True",
+              "value": "seo-enabled"
+            },
+            {
+              "name": "False",
+              "value": "seo-disabled"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

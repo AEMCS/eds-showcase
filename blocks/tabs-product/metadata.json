@@ -1,0 +1,39 @@
+{
+  "variantName": "tabs-product",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-05-08T12:13:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.dove.com/uk/home.html",
+    "originPage": "Dove UK Homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "grey",
+    "density": "compact",
+    "purpose": "product-listing",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "tab titles + product card panels",
+    "buttonCount": 0,
+    "imageCount": 7
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product listing tabs",
+      "new arrivals vs best selling tabs",
+      "category-filtered product grids"
+    ],
+    "notSuitableFor": [
+      "content-heavy informational tabs",
+      "FAQ tabs",
+      "form wizard steps"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/uk/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-08T12:13:00.000Z"
+  }
+}

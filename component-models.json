@@ -136,8 +136,119 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Two Column",
+            "value": "two-column"
           }
         ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "left-column-items",
+        "label": "Left Column Items",
+        "value": "1",
+        "description": "When the section uses Two Column style, this controls how many first items render in the left column."
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "summary",
+        "value": "",
+        "label": "Summary"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "buy-now",
+    "fields": [
+      {
+        "component": "select",
+        "name": "provider",
+        "label": "Provider",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "MikMak",
+            "value": "mikmak"
+          },
+          {
+            "name": "CartWire",
+            "value": "cartwire"
+          }
+        ],
+        "attributes": {
+          "data-provider": "{value}"
+        }
+      },
+      {
+        "component": "select",
+        "name": "mikMakExperience",
+        "label": "MikMak Experience",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Pop In",
+            "value": "popIn"
+          },
+          {
+            "name": "In Page",
+            "value": "inPage"
+          }
+        ],
+        "attributes": {
+          "data-mikmakexperience": "{value}"
+        }
+      },
+      {
+        "component": "select",
+        "name": "cartwireExperience",
+        "label": "CartWire Experience",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Popup",
+            "value": "popup"
+          },
+          {
+            "name": "Inline",
+            "value": "inline"
+          }
+        ],
+        "attributes": {
+          "data-cartwireexperience": "{value}"
+        }
+      },
+      {
+        "component": "text",
+        "name": "buyNowTitle",
+        "label": "Buy Now Title",
+        "valueType": "string",
+        "attributes": {
+          "data-buynowtitle": "{value}"
+        }
+      },
+      {
+        "component": "checkbox",
+        "name": "disableBuyNow",
+        "label": "Disable Buy Now",
+        "valueType": "boolean",
+        "attributes": {
+          "data-disablebuynow": "{value}"
+        }
       }
     ]
   },
@@ -161,6 +272,205 @@
     ]
   },
   {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel-hero-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "media_image",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "media_imageAlt",
+        "value": "",
+        "label": "Background Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "content_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel-launches-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "media_image",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "media_imageAlt",
+        "value": "",
+        "label": "Background Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "content_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel-stories-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "media_image",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "media_imageAlt",
+        "value": "",
+        "label": "Background Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "content_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "media_image",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "media_imageAlt",
+        "value": "",
+        "label": "Bacgkround Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "content_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "columns-collection",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "columns",
+        "value": "",
+        "label": "Columns"
+      },
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "rows",
+        "value": "",
+        "label": "Rows"
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
@@ -180,12 +490,108 @@
     ]
   },
   {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "embed_placeholder",
+        "label": "Placeholder Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "embed_placeholderAlt",
+        "value": "",
+        "label": "Placeholder Image Alt Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "embed_uri",
+        "label": "URI"
+      }
+    ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "select",
+        "name": "formType",
+        "label": "Form Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Contact Us",
+            "value": "contact-us"
+          },
+          {
+            "name": "Sign Up",
+            "value": "sign-up"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "hero-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "hero-top",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },
@@ -212,6 +618,1644 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "modal",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      }
+    ]
+  },
+  {
+    "id": "product-info",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Layout Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Two Columns",
+            "value": "two-cols"
+          },
+          {
+            "name": "Three Columns",
+            "value": "three-cols"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "product-info-item",
+    "fields": [
+      {
+        "component": "select",
+        "name": "elementType",
+        "label": "HTML Tag to display",
+        "options": [
+          {
+            "name": "P",
+            "value": "p"
+          },
+          {
+            "name": "H1",
+            "value": "h1"
+          },
+          {
+            "name": "H2",
+            "value": "h2"
+          },
+          {
+            "name": "H3",
+            "value": "h3"
+          },
+          {
+            "name": "H4",
+            "value": "h4"
+          },
+          {
+            "name": "H5",
+            "value": "h5"
+          },
+          {
+            "name": "H6",
+            "value": "h6"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "productAttribute",
+        "label": "Product Attribute",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Brand ProductName",
+            "value": "retailerproductdata/retailer1VOTEcommerceTitle"
+          },
+          {
+            "name": "Brand ProductDescription",
+            "value": "retailerproductdata/retailerProductDescription"
+          },
+          {
+            "name": "Brand HowToUse",
+            "value": "retailerproductdata/retailerHowToUseTitle"
+          },
+          {
+            "name": "Brand SubCategory",
+            "value": "retailerproductdata/retailerSubCategory"
+          },
+          {
+            "name": "Brand AboutThisProductBullets",
+            "value": "retailerproductdata/retailerAboutThisProductBullets"
+          },
+          {
+            "name": "Brand AboutThisProductDescription",
+            "value": "retailerproductdata/retailerAboutThisProductDescription"
+          },
+          {
+            "name": "Brand Allergy",
+            "value": "retailerproductdata/retailerAllergy"
+          },
+          {
+            "name": "Brand Category",
+            "value": "retailerproductdata/retailerCategory"
+          },
+          {
+            "name": "Brand HowToUseDescription",
+            "value": "retailerproductdata/retailerHowToUseDescription"
+          },
+          {
+            "name": "Brand IngredientsDisclaimer",
+            "value": "retailerproductdata/retailerIngredientsDisclaimer"
+          },
+          {
+            "name": "Brand IngredientStatement",
+            "value": "retailerproductdata/retailerIngredientStatement"
+          },
+          {
+            "name": "Brand LongProductDescription",
+            "value": "retailerproductdata/retailerLongProductDescription"
+          },
+          {
+            "name": "Brand MetaDescription",
+            "value": "retailerproductdata/retailerMetaDescription"
+          },
+          {
+            "name": "Brand MetaTitle",
+            "value": "retailerproductdata/retailerMetaTitle"
+          },
+          {
+            "name": "Brand PerfectForDescription",
+            "value": "retailerproductdata/retailerPerfectForDescription"
+          },
+          {
+            "name": "Brand retailerProductTags",
+            "value": "retailerproductdata/retailerProductTags"
+          },
+          {
+            "name": "Brand size",
+            "value": "retailerproductdata/retailerSize"
+          },
+          {
+            "name": "Brand foodIngredientStatement",
+            "value": "productdata/foodIngredientStatement"
+          },
+          {
+            "name": "Brand featureAndBenefits",
+            "value": "productdata/featureAndBenefits"
+          },
+          {
+            "name": "Brand retailerTryThisDescription",
+            "value": "retailerproductdata/retailerTryThisDescription"
+          },
+          {
+            "name": "Brand retailerMobilityNeeds",
+            "value": "retailerproductdata/customData/retailerMobilityNeeds"
+          },
+          {
+            "name": "Brand PETAApprovedVegan",
+            "value": "retailerproductdata/customData/PETAApprovedVegan"
+          },
+          {
+            "name": "Brand floralScent",
+            "value": "retailerproductdata/customData/floralScent"
+          },
+          {
+            "name": "Brand calmingScent",
+            "value": "retailerproductdata/customData/calmingScent"
+          },
+          {
+            "name": "Brand freshScent",
+            "value": "retailerproductdata/customData/freshScent"
+          },
+          {
+            "name": "Brand hypoallergenic",
+            "value": "retailerproductdata/customData/hypoallergenic"
+          },
+          {
+            "name": "Brand infintelyRecyclable",
+            "value": "retailerproductdata/customData/infintelyRecyclable"
+          },
+          {
+            "name": "Brand invigoratingScent",
+            "value": "retailerproductdata/customData/invigoratingScent"
+          },
+          {
+            "name": "Brand microbiomeGentle",
+            "value": "retailerproductdata/customData/microbiomeGentle"
+          },
+          {
+            "name": "Brand naturallyDerived",
+            "value": "retailerproductdata/customData/naturallyDerived"
+          },
+          {
+            "name": "Brand no1DermatologistRecommendedBrand",
+            "value": "retailerproductdata/customData/no1DermatologistRecommendedBrand"
+          },
+          {
+            "name": "Brand noSulfateCleansers",
+            "value": "retailerproductdata/customData/noSulfateCleansers"
+          },
+          {
+            "name": "Brand pHbalanced",
+            "value": "retailerproductdata/customData/pHbalanced"
+          },
+          {
+            "name": "Brand refillable",
+            "value": "retailerproductdata/customData/refillable"
+          },
+          {
+            "name": "Brand sensitiveSkin",
+            "value": "retailerproductdata/customData/sensitiveSkin"
+          },
+          {
+            "name": "Brand sulfateFree",
+            "value": "retailerproductdata/customData/sulfateFree"
+          },
+          {
+            "name": "Brand unscented",
+            "value": "retailerproductdata/customData/unscented"
+          },
+          {
+            "name": "Brand zeroParabens",
+            "value": "retailerproductdata/customData/zeroParabens"
+          },
+          {
+            "name": "Brand zeroAlcohol",
+            "value": "retailerproductdata/customData/zeroAlcohol"
+          },
+          {
+            "name": "Brand zeroAluminum",
+            "value": "retailerproductdata/customData/zeroAluminum"
+          },
+          {
+            "name": "Brand recycledPlasticPackaging",
+            "value": "retailerproductdata/customData/recycledPlasticPackaging"
+          },
+          {
+            "name": "Brand developedWithDermatologists",
+            "value": "retailerproductdata/customData/developedWithDermatologists"
+          },
+          {
+            "name": "Brand clinicallyTested",
+            "value": "retailerproductdata/customData/clinicallyTested"
+          },
+          {
+            "name": "Brand scienceBacked",
+            "value": "retailerproductdata/customData/scienceBacked"
+          },
+          {
+            "name": "Brand bioProteinCare",
+            "value": "retailerproductdata/customData/bioProteinCare"
+          },
+          {
+            "name": "Brand invisibleDrySerum",
+            "value": "retailerproductdata/customData/invisibleDrySerum"
+          },
+          {
+            "name": "Brand NaturalCassavaStrach",
+            "value": "retailerproductdata/customData/NaturalCassavaStrach"
+          },
+          {
+            "name": "Brand dermatologistTested",
+            "value": "retailerproductdata/customData/dermatologistTested"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "product-list",
+    "fields": [
+      {
+        "component": "tab",
+        "name": "contentTab",
+        "label": "Content"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Layout Style",
+        "valueType": "string",
+        "value": "list",
+        "options": [
+          {
+            "name": "List",
+            "value": "list"
+          },
+          {
+            "name": "Slider",
+            "value": "slider"
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "name": "listTab",
+        "label": "List Settings"
+      },
+      {
+        "component": "select",
+        "name": "classes_listInitialItems",
+        "label": "Default Number of List Items",
+        "valueType": "string",
+        "value": "list-initial-4",
+        "options": [
+          {
+            "name": "2 items",
+            "value": "list-initial-2"
+          },
+          {
+            "name": "3 items",
+            "value": "list-initial-3"
+          },
+          {
+            "name": "4 items",
+            "value": "list-initial-4"
+          },
+          {
+            "name": "6 items",
+            "value": "list-initial-6"
+          },
+          {
+            "name": "8 items",
+            "value": "list-initial-8"
+          },
+          {
+            "name": "12 items",
+            "value": "list-initial-12"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_listLoadMoreItems",
+        "label": "Number of Items on Load More",
+        "valueType": "string",
+        "value": "list-load-more-4",
+        "options": [
+          {
+            "name": "2 items",
+            "value": "list-load-more-2"
+          },
+          {
+            "name": "3 items",
+            "value": "list-load-more-3"
+          },
+          {
+            "name": "4 items",
+            "value": "list-load-more-4"
+          },
+          {
+            "name": "6 items",
+            "value": "list-load-more-6"
+          },
+          {
+            "name": "8 items",
+            "value": "list-load-more-8"
+          },
+          {
+            "name": "12 items",
+            "value": "list-load-more-12"
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "name": "layoutTab",
+        "label": "Responsive Items"
+      },
+      {
+        "component": "select",
+        "name": "classes_carouselMobileItems",
+        "label": "Number of Items on Mobile",
+        "valueType": "string",
+        "value": "carousel-mobile-1",
+        "options": [
+          {
+            "name": "1 item",
+            "value": "carousel-mobile-1"
+          },
+          {
+            "name": "2 items",
+            "value": "carousel-mobile-2"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_carouselTabletItems",
+        "label": "Number of Items on Tablet",
+        "valueType": "string",
+        "value": "carousel-tablet-2",
+        "options": [
+          {
+            "name": "1 item",
+            "value": "carousel-tablet-1"
+          },
+          {
+            "name": "2 items",
+            "value": "carousel-tablet-2"
+          },
+          {
+            "name": "3 items",
+            "value": "carousel-tablet-3"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_carouselDesktopItems",
+        "label": "Number of Items on Desktop",
+        "valueType": "string",
+        "value": "carousel-desktop-4",
+        "options": [
+          {
+            "name": "1 item",
+            "value": "carousel-desktop-1"
+          },
+          {
+            "name": "2 items",
+            "value": "carousel-desktop-2"
+          },
+          {
+            "name": "3 items",
+            "value": "carousel-desktop-3"
+          },
+          {
+            "name": "4 items",
+            "value": "carousel-desktop-4"
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "name": "sliderTab",
+        "label": "Slider Settings"
+      },
+      {
+        "component": "select",
+        "name": "classes_carouselNavigation",
+        "label": "Carousel Navigation",
+        "valueType": "string",
+        "value": "carousel-navigation",
+        "options": [
+          {
+            "name": "Show",
+            "value": "carousel-navigation"
+          },
+          {
+            "name": "Hide",
+            "value": "carousel-no-navigation"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_carouselIndicators",
+        "label": "Carousel Indicators",
+        "valueType": "string",
+        "value": "indicators-count",
+        "options": [
+          {
+            "name": "Count",
+            "value": "indicators-count"
+          },
+          {
+            "name": "Dots",
+            "value": "indicators-dots"
+          },
+          {
+            "name": "None",
+            "value": "indicators-none"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_carouselLoop",
+        "label": "Carousel Loop",
+        "valueType": "string",
+        "value": "carousel-loop",
+        "options": [
+          {
+            "name": "Enabled",
+            "value": "carousel-loop"
+          },
+          {
+            "name": "Disabled",
+            "value": "carousel-no-loop"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_carouselAutoplay",
+        "label": "Carousel Autoplay",
+        "valueType": "string",
+        "value": "carousel-no-autoplay",
+        "options": [
+          {
+            "name": "Disabled",
+            "value": "carousel-no-autoplay"
+          },
+          {
+            "name": "Enabled",
+            "value": "carousel-autoplay"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "product-media-gallery",
+    "fields": [
+      {
+        "component": "tab",
+        "name": "layoutTab",
+        "label": "Layout"
+      },
+      {
+        "component": "select",
+        "name": "classes_layout",
+        "label": "Gallery Layout",
+        "tab": "layoutTab",
+        "value": "horizontal-view",
+        "options": [
+          {
+            "name": "Horizontal",
+            "value": "horizontal-view"
+          },
+          {
+            "name": "Vertical",
+            "value": "vertical-view"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_thumbnails",
+        "label": "Show Thumbnails",
+        "tab": "layoutTab",
+        "value": "show-thumbnails",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "show-thumbnails"
+          },
+          {
+            "name": "No",
+            "value": "hide-thumbnails"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_single_asset",
+        "label": "Show only first asset",
+        "tab": "layoutTab",
+        "value": "show-all-assets",
+        "options": [
+          {
+            "name": "No",
+            "value": "show-all-assets"
+          },
+          {
+            "name": "Yes",
+            "value": "single-asset-only"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_carousel_min",
+        "label": "Minimum items to enable carousel",
+        "tab": "layoutTab",
+        "value": "carousel-min-1",
+        "options": [
+          {
+            "name": "1",
+            "value": "carousel-min-1"
+          },
+          {
+            "name": "2",
+            "value": "carousel-min-2"
+          },
+          {
+            "name": "3",
+            "value": "carousel-min-3"
+          },
+          {
+            "name": "4",
+            "value": "carousel-min-4"
+          },
+          {
+            "name": "5",
+            "value": "carousel-min-5"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_zoom",
+        "label": "Enable Image Zoom",
+        "tab": "layoutTab",
+        "value": "enable-zoom",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "enable-zoom"
+          },
+          {
+            "name": "No",
+            "value": "disable-zoom"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_zoom_button",
+        "label": "Show Zoom Button",
+        "tab": "layoutTab",
+        "value": "show-zoom-button",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "show-zoom-button"
+          },
+          {
+            "name": "No",
+            "value": "hide-zoom-button"
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "name": "videoTab",
+        "label": "Video Settings"
+      },
+      {
+        "component": "select",
+        "name": "classes_video_provider",
+        "label": "Video Provider",
+        "tab": "videoTab",
+        "value": "video-html",
+        "options": [
+          {
+            "name": "HTML5 Video",
+            "value": "video-html"
+          },
+          {
+            "name": "YouTube",
+            "value": "video-youtube"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_video_autoplay",
+        "label": "Enable Autoplay",
+        "tab": "videoTab",
+        "value": "video-no-autoplay",
+        "options": [
+          {
+            "name": "No",
+            "value": "video-no-autoplay"
+          },
+          {
+            "name": "Yes",
+            "value": "video-autoplay"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_video_loop",
+        "label": "Enable Loop",
+        "tab": "videoTab",
+        "value": "video-no-loop",
+        "options": [
+          {
+            "name": "No",
+            "value": "video-no-loop"
+          },
+          {
+            "name": "Yes",
+            "value": "video-loop"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_video_controls",
+        "label": "Disable Video Controls",
+        "tab": "videoTab",
+        "value": "video-controls",
+        "options": [
+          {
+            "name": "Show Controls",
+            "value": "video-controls"
+          },
+          {
+            "name": "Hide Controls",
+            "value": "video-no-controls"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_video_mute",
+        "label": "Enable Mute",
+        "tab": "videoTab",
+        "value": "video-muted",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "video-muted"
+          },
+          {
+            "name": "No",
+            "value": "video-unmuted"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_video_overlay",
+        "label": "Display Video in Overlay",
+        "tab": "videoTab",
+        "value": "video-inline",
+        "options": [
+          {
+            "name": "Inline",
+            "value": "video-inline"
+          },
+          {
+            "name": "Overlay",
+            "value": "video-overlay"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "quote-inspirational",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "quotation",
+        "value": "",
+        "label": "Quotation"
+      },
+      {
+        "component": "richtext",
+        "name": "attribution",
+        "value": "",
+        "label": "Attribution",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "quote",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "quotation",
+        "value": "",
+        "label": "Quotation"
+      },
+      {
+        "component": "richtext",
+        "name": "attribution",
+        "value": "",
+        "label": "Attribution",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "ratings",
+    "fields": [
+      {
+        "component": "tab",
+        "name": "kritiqueTab",
+        "label": "Kritique"
+      },
+      {
+        "component": "select",
+        "name": "classes_kritique",
+        "label": "Kritique Variation",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "SummaryWidget",
+            "value": "summarywidget"
+          },
+          {
+            "name": "ReadPanelWidget",
+            "value": "readpanelwidget"
+          },
+          {
+            "name": "OnlyStarsWidget",
+            "value": "onlystarswidget"
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "name": "bazaarvoiceTab",
+        "label": "BazaarVoice"
+      },
+      {
+        "component": "select",
+        "name": "classes_bazaarvoice",
+        "label": "BazaarVoice Variation",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "InlineRating",
+            "value": "inlinerating"
+          },
+          {
+            "name": "RatingsAndReviews",
+            "value": "ratingsandreviews"
+          },
+          {
+            "name": "SummaryContainer",
+            "value": "summarycontainer"
+          },
+          {
+            "name": "FeaturedReview",
+            "value": "featuredreview"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_seo",
+        "label": "Enable SEO",
+        "valueType": "string",
+        "value": "seo-disabled",
+        "condition": {
+          "key": "classes_bazaarvoice",
+          "value": "summarycontainer"
+        },
+        "options": [
+          {
+            "name": "True",
+            "value": "seo-enabled"
+          },
+          {
+            "name": "False",
+            "value": "seo-disabled"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "related-articles",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Section Title",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "article1",
+        "label": "Article 1",
+        "rootPath": "/content/dove/us/en/articles"
+      },
+      {
+        "component": "aem-content",
+        "name": "article2",
+        "label": "Article 2",
+        "rootPath": "/content/dove/us/en/articles"
+      },
+      {
+        "component": "aem-content",
+        "name": "article3",
+        "label": "Article 3",
+        "rootPath": "/content/dove/us/en/articles"
+      },
+      {
+        "component": "aem-content",
+        "name": "article4",
+        "label": "Article 4",
+        "rootPath": "/content/dove/us/en/articles"
+      },
+      {
+        "component": "number",
+        "name": "cards",
+        "label": "Max articles to display",
+        "value": 3,
+        "valueType": "number"
+      }
+    ]
+  },
+  {
+    "id": "related-product",
+    "fields": [
+      {
+        "component": "tab",
+        "name": "basicTab",
+        "label": "Basic"
+      },
+      {
+        "component": "richtext",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "subtitle",
+        "value": "",
+        "label": "Subtitle",
+        "valueType": "string"
+      },
+      {
+        "component": "boolean",
+        "name": "classes_displayAwards",
+        "label": "Display Product Awards",
+        "valueType": "boolean",
+        "value": false
+      },
+      {
+        "component": "select",
+        "name": "classes_targetProducts",
+        "label": "Target Products to Display",
+        "valueType": "string",
+        "value": "related-products",
+        "options": [
+          {
+            "name": "Related Products",
+            "value": "related-products"
+          },
+          {
+            "name": "Goes Well Products",
+            "value": "goes-well-products"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Layout Option",
+        "valueType": "string",
+        "value": "list",
+        "options": [
+          {
+            "name": "List",
+            "value": "list"
+          },
+          {
+            "name": "Carousel",
+            "value": "carousel"
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "name": "responsiveItemsTab",
+        "label": "Responsive Items"
+      },
+      {
+        "component": "select",
+        "name": "classes_carouselMobileItems",
+        "label": "Number of Items on Mobile",
+        "valueType": "string",
+        "value": "carousel-mobile-1",
+        "options": [
+          {
+            "name": "1 item",
+            "value": "carousel-mobile-1"
+          },
+          {
+            "name": "2 items",
+            "value": "carousel-mobile-2"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_carouselTabletItems",
+        "label": "Number of Items on Tablet",
+        "valueType": "string",
+        "value": "carousel-tablet-2",
+        "options": [
+          {
+            "name": "2 items",
+            "value": "carousel-tablet-2"
+          },
+          {
+            "name": "3 items",
+            "value": "carousel-tablet-3"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_carouselDesktopItems",
+        "label": "Number of Items on Desktop",
+        "valueType": "string",
+        "value": "carousel-desktop-4",
+        "options": [
+          {
+            "name": "4 items",
+            "value": "carousel-desktop-4"
+          },
+          {
+            "name": "6 items",
+            "value": "carousel-desktop-6"
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "name": "listSettingsTab",
+        "label": "List Settings"
+      },
+      {
+        "component": "select",
+        "name": "classes_listInitialItems",
+        "label": "Default Number of List Items",
+        "valueType": "string",
+        "value": "list-initial-4",
+        "options": [
+          {
+            "name": "2 items",
+            "value": "list-initial-2"
+          },
+          {
+            "name": "3 items",
+            "value": "list-initial-3"
+          },
+          {
+            "name": "4 items",
+            "value": "list-initial-4"
+          },
+          {
+            "name": "6 items",
+            "value": "list-initial-6"
+          },
+          {
+            "name": "8 items",
+            "value": "list-initial-8"
+          },
+          {
+            "name": "12 items",
+            "value": "list-initial-12"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_listLoadMoreItems",
+        "label": "Number of Items on Load More",
+        "valueType": "string",
+        "value": "list-load-more-4",
+        "options": [
+          {
+            "name": "2 items",
+            "value": "list-load-more-2"
+          },
+          {
+            "name": "3 items",
+            "value": "list-load-more-3"
+          },
+          {
+            "name": "4 items",
+            "value": "list-load-more-4"
+          },
+          {
+            "name": "6 items",
+            "value": "list-load-more-6"
+          },
+          {
+            "name": "8 items",
+            "value": "list-load-more-8"
+          },
+          {
+            "name": "12 items",
+            "value": "list-load-more-12"
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "name": "carouselSettingsTab",
+        "label": "Carousel Settings"
+      },
+      {
+        "component": "boolean",
+        "name": "classes_carouselNavigation",
+        "label": "Enable Carousel Navigation",
+        "valueType": "boolean",
+        "value": true
+      },
+      {
+        "component": "boolean",
+        "name": "classes_carouselLoop",
+        "label": "Enable Carousel Loop",
+        "valueType": "boolean",
+        "value": true
+      },
+      {
+        "component": "boolean",
+        "name": "classes_carouselAutoplay",
+        "label": "Enable Carousel Autoplay",
+        "valueType": "boolean",
+        "value": false
+      },
+      {
+        "component": "select",
+        "name": "classes_carouselIndicators",
+        "label": "Carousel Indicators",
+        "valueType": "string",
+        "value": "indicators-count",
+        "options": [
+          {
+            "name": "Count",
+            "value": "indicators-count"
+          },
+          {
+            "name": "Dots",
+            "value": "indicators-dots"
+          },
+          {
+            "name": "None",
+            "value": "indicators-none"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "search",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "index",
+        "label": "Index"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Options",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Search Type",
+            "children": [
+              {
+                "name": "Minimal",
+                "value": "minimal"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "table",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Options",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Border",
+            "children": [
+              {
+                "name": "Striped",
+                "value": "striped"
+              },
+              {
+                "name": "Bordered",
+                "value": "bordered"
+              }
+            ]
+          },
+          {
+            "name": "Header",
+            "children": [
+              {
+                "name": "No Header",
+                "value": "no-header"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "filter",
+        "label": "Columns",
+        "valueType": "string",
+        "value": "table",
+        "options": [
+          {
+            "name": "1 Column",
+            "value": "table"
+          },
+          {
+            "name": "2 Columns",
+            "value": "table-2-columns"
+          },
+          {
+            "name": "3 Columns",
+            "value": "table-3-columns"
+          },
+          {
+            "name": "4 Columns",
+            "value": "table-4-columns"
+          },
+          {
+            "name": "5 Columns",
+            "value": "table-5-columns"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "table-row",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column1text",
+        "label": "Column1"
+      }
+    ]
+  },
+  {
+    "id": "table-col-2",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column1text",
+        "label": "Column1"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column2text",
+        "label": "Column2"
+      }
+    ]
+  },
+  {
+    "id": "table-col-3",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column1text",
+        "label": "Column1"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column2text",
+        "label": "Column2"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column3text",
+        "label": "Column3"
+      }
+    ]
+  },
+  {
+    "id": "table-col-4",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column1text",
+        "label": "Column1"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column2text",
+        "label": "Column2"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column3text",
+        "label": "Column3"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column4text",
+        "label": "Column4"
+      }
+    ]
+  },
+  {
+    "id": "tabs-product-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "value": "",
+        "label": "Tab Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "content_heading",
+        "value": "",
+        "label": "Heading"
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "content_headingType",
+        "value": "",
+        "label": "Heading Type",
+        "options": [
+          {
+            "name": "H3",
+            "value": "h3"
+          },
+          {
+            "name": "H4",
+            "value": "h4"
+          },
+          {
+            "name": "H5",
+            "value": "h5"
+          },
+          {
+            "name": "H6",
+            "value": "h6"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "content_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "content_richtext",
+        "value": "",
+        "label": "Content",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "tabs-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "value": "",
+        "label": "Tab Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "content_heading",
+        "value": "",
+        "label": "Heading"
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "content_headingType",
+        "value": "",
+        "label": "Heading Type",
+        "options": [
+          {
+            "name": "H3",
+            "value": "h3"
+          },
+          {
+            "name": "H4",
+            "value": "h4"
+          },
+          {
+            "name": "H5",
+            "value": "h5"
+          },
+          {
+            "name": "H6",
+            "value": "h6"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "content_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "content_richtext",
+        "value": "",
+        "label": "Content",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "tags",
+    "fields": [
+      {
+        "component": "text",
+        "name": "headingText",
+        "label": "Heading Text",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "subheadingText",
+        "label": "Subheading Text",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "name": "headingElementType",
+        "label": "Heading Element Type",
+        "valueType": "string",
+        "value": "h2",
+        "options": [
+          {
+            "name": "H1",
+            "value": "h1"
+          },
+          {
+            "name": "H2",
+            "value": "h2"
+          },
+          {
+            "name": "H3",
+            "value": "h3"
+          },
+          {
+            "name": "H4",
+            "value": "h4"
+          },
+          {
+            "name": "H5",
+            "value": "h5"
+          },
+          {
+            "name": "H6",
+            "value": "h6"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "buildTagsUsing",
+        "label": "Build Tags Using",
+        "valueType": "string",
+        "value": "manual",
+        "options": [
+          {
+            "name": "Manual",
+            "value": "manual"
+          },
+          {
+            "name": "Parent",
+            "value": "parent"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "name": "tags",
+        "label": "Tags",
+        "multi": true
+      },
+      {
+        "component": "multiselect",
+        "name": "tagsToExclude",
+        "label": "Tags To Exclude",
+        "valueType": "array",
+        "multi": true,
+        "optionsSource": "/bin/exportTags.json",
+        "optionLabelPath": "title",
+        "optionValuePath": "id"
+      },
+      {
+        "component": "number",
+        "name": "maxTagsToDisplay",
+        "label": "Maximum Tags To Display",
+        "valueType": "number",
+        "value": 0
+      },
+      {
+        "component": "number",
+        "name": "minTagsToDisplay",
+        "label": "Minimum Tags To Display",
+        "valueType": "number",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "variant-selector",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Layout Option",
+        "valueType": "string",
+        "value": "dropdown-view",
+        "options": [
+          {
+            "name": "Dropdown View",
+            "value": "dropdown-view"
+          },
+          {
+            "name": "Buttons View",
+            "value": "buttons-view"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_variantAttribute",
+        "label": "Variation Attribute",
+        "valueType": "string",
+        "value": "attribute-size",
+        "options": [
+          {
+            "name": "Size",
+            "value": "attribute-size"
+          },
+          {
+            "name": "Name",
+            "value": "attribute-name"
+          },
+          {
+            "name": "Description",
+            "value": "attribute-description"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "video",
+    "fields": [
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "uri",
+        "label": "Video"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Options",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Auto Play",
+            "children": [
+              {
+                "name": "AutoPlay",
+                "value": "autoplay"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "placeholder_image",
+        "label": "Placeholder Image",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "placeholder_imageAlt",
+        "value": "",
+        "label": "Placeholder Image Alt Text"
       }
     ]
   }

@@ -1,15 +1,22 @@
 import {
   loadHeader,
   loadFooter,
+  decorateButtons,
   decorateIcons,
   decorateSections,
   decorateBlocks,
   decorateTemplateAndTheme,
+  getMetadata,
   waitForFirstImage,
   loadSection,
   loadSections,
   loadCSS,
 } from './aem.js';
+import { loadBlock, loadBrandSiteCss,loadBrandFonts } from './utils/override-theme.js';
+import { isPDPPage, runProductSchema } from './api/product-schema.js';
+import { getProduct } from './api/products.js';
+
+
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -57,6 +64,17 @@ async function loadFonts() {
   }
 }
 
+function autolinkModals(doc) {
+  doc.addEventListener('click', async (e) => {
+    const origin = e.target.closest('a');
+    if (origin && origin.href && origin.href.includes('/modals/')) {
+      e.preventDefault();
+      const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
+      openModal(origin.href);
+    }
+  });
+}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -70,42 +88,15 @@ function buildAutoBlocks() {
   }
 }
 
-/**
- * Decorates formatted links to style them as buttons.
- * @param {HTMLElement} main The main container element
- */
-export function decorateButtons(main) {
-  main.querySelectorAll('p a[href]').forEach((a) => {
-    a.title = a.title || a.textContent;
-    const p = a.closest('p');
-    const text = a.textContent.trim();
-
-    // quick structural checks
-    if (a.querySelector('img') || p.textContent.trim() !== text) return;
-
-    // skip URL display links
-    try {
-      if (new URL(a.href).href === new URL(text, window.location).href) return;
-    } catch { /* continue */ }
-
-    // require authored formatting for buttonization
-    const strong = a.closest('strong');
-    const em = a.closest('em');
-    if (!strong && !em) return;
-
-    p.className = 'button-wrapper';
-    a.className = 'button';
-    if (strong && em) { // high-impact call-to-action
-      a.classList.add('accent');
-      const outer = strong.contains(em) ? strong : em;
-      outer.replaceWith(a);
-    } else if (strong) {
-      a.classList.add('primary');
-      strong.replaceWith(a);
-    } else {
-      a.classList.add('secondary');
-      em.replaceWith(a);
+function a11yLinks(main) {
+  const links = main.querySelectorAll('a');
+  links.forEach((link) => {
+    let label = link.textContent;
+    if (!label && link.querySelector('span.icon')) {
+      const icon = link.querySelector('span.icon');
+      label = icon ? icon.classList[1]?.split('-')[1] : label;
     }
+    link.setAttribute('aria-label', label);
   });
 }
 
@@ -115,11 +106,14 @@ export function decorateButtons(main) {
  */
 // eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
+  // hopefully forward compatible button decoration
+  decorateButtons(main);
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
-  decorateButtons(main);
+  // add aria-label to links
+  a11yLinks(main);
 }
 
 /**
@@ -129,6 +123,9 @@ export function decorateMain(main) {
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
+  if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
+    doc.body.dataset.breadcrumbs = true;
+  }
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
@@ -146,24 +143,90 @@ async function loadEager(doc) {
   }
 }
 
+async function applyPDPMetadata() {
+  try {
+    if (!isPDPPage()) return;
+
+    const response = await getProduct();
+    const product = extractProduct(response);
+
+    if (!product) return;
+    const productName = extractProductName(product);
+
+    // TITLE
+    document.title =
+      product?.meta_title ||
+      productName ||
+      'Product';
+
+    // META DESCRIPTION
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) {
+      desc.setAttribute(
+        'content',
+        product?.meta_description || ''
+      );
+    }
+
+    // OPEN GRAPH 
+    const setMeta = (attr, key, value) => {
+      if (!value) return;
+
+      let tag = document.querySelector(`meta[${attr}="${key}"]`);
+
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute(attr, key);
+        document.head.appendChild(tag);
+      }
+
+      tag.setAttribute('content', value);
+    };
+
+    setMeta('property', 'og:title', product?.meta_title || productName);
+    setMeta('property', 'og:description', product?.meta_description);
+
+    setMeta('name', 'twitter:title', product?.meta_title || productName);
+    setMeta('name', 'twitter:description', product?.meta_description);
+
+  } catch (e) {
+    console.error('PDP metadata error:', e);
+  }
+}
+
 /**
  * Loads everything that doesn't need to be delayed.
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
-  loadHeader(doc.querySelector('header'));
+ runProductSchema();
+  autolinkModals(doc);
 
   const main = doc.querySelector('main');
   await loadSections(main);
+  applyPDPMetadata();
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
 
+  loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+  await loadBrandSiteCss();
+  await loadBrandFonts();
+  const blocks = [...main.querySelectorAll('[data-block-name]')];
+  for (const block of blocks) {
+    const blockName = block.dataset.blockName;
+    if (blockName) {
+      await loadBlock(blockName);
+    }
+  }
+
+  await loadBlock('header');
+  await loadBlock('footer');
 }
 
 /**
@@ -171,14 +234,47 @@ async function loadLazy(doc) {
  * without impacting the user experience.
  */
 function loadDelayed() {
-  // eslint-disable-next-line import/no-cycle
   window.setTimeout(() => import('./delayed.js'), 3000);
-  // load anything that can be postponed to the latest here
+}
+function showPageLoader() {
+  if (document.getElementById('page-loader')) return;
+
+  const loader = document.createElement('div');
+  loader.id = 'page-loader';
+
+  loader.innerHTML = `
+    <div class="loader-spinner"></div>
+  `;
+
+  document.body.appendChild(loader);
 }
 
+function hidePageLoader() {
+  const loader = document.getElementById('page-loader');
+  if (loader) {
+    loader.classList.add('fade-out');
+
+    setTimeout(() => {
+      loader.remove();
+    }, 300);
+  }
+}
 async function loadPage() {
-  await loadEager(document);
-  await loadLazy(document);
+  showPageLoader();
+
+  try {
+    await loadEager(document);
+
+    await Promise.race([
+      loadLazy(document),
+      new Promise((resolve) => setTimeout(resolve, 4000)), // fallback
+    ]);
+
+  } catch (e) {
+    console.warn('Page load error:', e);
+  }
+
+  hidePageLoader();
   loadDelayed();
 }
 

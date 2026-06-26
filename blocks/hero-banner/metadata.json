@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-11T10:31:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.knorr.com/ng/home.html",
+    "originPage": "Knorr Nigeria Homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "promotional-teaser",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + paragraph + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage promotional banners",
+      "half-image half-text teasers",
+      "branded campaign banners with green/accent backgrounds"
+    ],
+    "notSuitableFor": [
+      "text-only heroes",
+      "full-bleed background image heroes",
+      "minimal page headers without images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/ng/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-11T10:31:00.000Z"
+  }
+}

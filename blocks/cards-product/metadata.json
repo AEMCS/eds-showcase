@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-11T10:31:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.knorr.com/ng/home.html",
+    "originPage": "Knorr Nigeria Homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "product-showcase",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + title + CTA button",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product listing grids",
+      "product showcase cards",
+      "e-commerce product tiles with packshot images"
+    ],
+    "notSuitableFor": [
+      "article/blog cards with descriptions",
+      "recipe cards with metadata",
+      "category navigation cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/ng/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-11T10:31:00.000Z"
+  }
+}

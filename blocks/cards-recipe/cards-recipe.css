@@ -1,0 +1,87 @@
+.cards-recipe > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-m);
+}
+
+.cards-recipe > ul > li {
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.cards-recipe .cards-recipe-card-image {
+  line-height: 0;
+}
+
+.cards-recipe .cards-recipe-card-image picture {
+  display: block;
+  width: 100%;
+}
+
+.cards-recipe .cards-recipe-card-image img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.cards-recipe .cards-recipe-card-body {
+  padding: var(--spacing-s);
+}
+
+.cards-recipe h3 {
+  font-size: var(--heading-font-size-s);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-xs);
+}
+
+.cards-recipe h3 a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.cards-recipe h3 a:hover {
+  color: var(--color-brand-primary);
+}
+
+.cards-recipe p {
+  font-size: var(--body-font-size-s);
+  color: var(--color-text-light);
+  margin: var(--spacing-xs) 0;
+  line-height: 1.4;
+}
+
+.cards-recipe .cards-recipe-card-body p:last-child a {
+  display: inline-block;
+  background-color: var(--color-brand-primary);
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  text-decoration: none;
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
+  margin-top: var(--spacing-xs);
+  transition: background-color var(--transition-base);
+}
+
+.cards-recipe .cards-recipe-card-body p:last-child a:hover {
+  background-color: var(--color-brand-primary-dark);
+  text-decoration: none;
+}
+
+@media (width >= 600px) {
+  .cards-recipe > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-recipe > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

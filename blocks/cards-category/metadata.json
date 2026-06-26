@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-category",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-08T12:13:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.dove.com/uk/home.html",
+    "originPage": "Dove UK Homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "category-navigation",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "image + text link",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "category navigation grids",
+      "product range overview",
+      "simple linked cards with images"
+    ],
+    "notSuitableFor": [
+      "article cards with descriptions",
+      "product detail cards",
+      "testimonial cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/uk/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-08T12:13:00.000Z"
+  }
+}

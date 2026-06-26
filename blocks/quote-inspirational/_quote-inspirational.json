@@ -1,0 +1,41 @@
+{
+  "definitions": [
+    {
+      "title": "Quote Inspirational",
+      "id": "quote-inspirational",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Quote Inspirational",
+              "model": "quote-inspirational"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "quote-inspirational",
+      "fields": [
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "quotation",
+          "value": "",
+          "label": "Quotation"
+        },
+        {
+          "component": "richtext",
+          "name": "attribution",
+          "value": "",
+          "label": "Attribution",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

@@ -1,0 +1,310 @@
+{
+  "definitions": [
+    {
+      "title": "Product-info",
+      "id": "product-info",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Product-info",
+              "model": "product-info",
+              "filter": "product-info"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Product Info Item",
+      "id": "product-info-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Product Info Item",
+              "model": "product-info-item"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "product-info",
+      "fields": [
+        {
+          "component": "select",
+          "name": "classes",
+          "value": "",
+          "label": "Layout Style",
+          "valueType": "string",
+          "options": [
+            {
+              "name": "Default",
+              "value": ""
+            },
+            {
+              "name": "Two Columns",
+              "value": "two-cols"
+            },
+            {
+              "name": "Three Columns",
+              "value": "three-cols"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "product-info-item",
+      "fields": [
+        {
+          "component": "select",
+          "name": "elementType",
+          "label": "HTML Tag to display",
+          "options": [
+            {
+              "name": "P",
+              "value": "p"
+            },
+            {
+              "name": "H1",
+              "value": "h1"
+            },
+            {
+              "name": "H2",
+              "value": "h2"
+            },
+            {
+              "name": "H3",
+              "value": "h3"
+            },
+            {
+              "name": "H4",
+              "value": "h4"
+            },
+            {
+              "name": "H5",
+              "value": "h5"
+            },
+            {
+              "name": "H6",
+              "value": "h6"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "productAttribute",
+          "label": "Product Attribute",
+          "valueType": "string",
+          "options": [
+            {
+              "name": "Brand ProductName",
+              "value": "retailerproductdata/retailer1VOTEcommerceTitle"
+            },
+            {
+              "name": "Brand ProductDescription",
+              "value": "retailerproductdata/retailerProductDescription"
+            },
+            {
+              "name": "Brand HowToUse",
+              "value": "retailerproductdata/retailerHowToUseTitle"
+            },
+            {
+              "name": "Brand SubCategory",
+              "value": "retailerproductdata/retailerSubCategory"
+            },
+            {
+              "name": "Brand AboutThisProductBullets",
+              "value": "retailerproductdata/retailerAboutThisProductBullets"
+            },
+            {
+              "name": "Brand AboutThisProductDescription",
+              "value": "retailerproductdata/retailerAboutThisProductDescription"
+            },
+            {
+              "name": "Brand Allergy",
+              "value": "retailerproductdata/retailerAllergy"
+            },
+            {
+              "name": "Brand Category",
+              "value": "retailerproductdata/retailerCategory"
+            },
+            {
+              "name": "Brand HowToUseDescription",
+              "value": "retailerproductdata/retailerHowToUseDescription"
+            },
+            {
+              "name": "Brand IngredientsDisclaimer",
+              "value": "retailerproductdata/retailerIngredientsDisclaimer"
+            },
+            {
+              "name": "Brand IngredientStatement",
+              "value": "retailerproductdata/retailerIngredientStatement"
+            },
+            {
+              "name": "Brand LongProductDescription",
+              "value": "retailerproductdata/retailerLongProductDescription"
+            },
+            {
+              "name": "Brand MetaDescription",
+              "value": "retailerproductdata/retailerMetaDescription"
+            },
+            {
+              "name": "Brand MetaTitle",
+              "value": "retailerproductdata/retailerMetaTitle"
+            },
+            {
+              "name": "Brand PerfectForDescription",
+              "value": "retailerproductdata/retailerPerfectForDescription"
+            },
+            {
+              "name": "Brand retailerProductTags",
+              "value": "retailerproductdata/retailerProductTags"
+            },
+            {
+              "name": "Brand size",
+              "value": "retailerproductdata/retailerSize"
+            },
+             {
+              "name": "Brand foodIngredientStatement",
+              "value": "productdata/foodIngredientStatement"
+            },{
+              "name": "Brand featureAndBenefits",
+              "value": "productdata/featureAndBenefits"
+            },
+            {
+              "name": "Brand retailerTryThisDescription",
+              "value": "retailerproductdata/retailerTryThisDescription"
+            },
+            {
+              "name": "Brand retailerMobilityNeeds",
+              "value": "retailerproductdata/customData/retailerMobilityNeeds"
+            },
+            {
+              "name": "Brand PETAApprovedVegan",
+              "value": "retailerproductdata/customData/PETAApprovedVegan"
+            },
+            {
+              "name": "Brand floralScent",
+              "value": "retailerproductdata/customData/floralScent"
+            },
+            {
+              "name": "Brand calmingScent",
+              "value": "retailerproductdata/customData/calmingScent"
+            },
+            {
+              "name": "Brand freshScent",
+              "value": "retailerproductdata/customData/freshScent"
+            },
+            {
+              "name": "Brand hypoallergenic",
+              "value": "retailerproductdata/customData/hypoallergenic"
+            },
+            {
+              "name": "Brand infintelyRecyclable",
+              "value": "retailerproductdata/customData/infintelyRecyclable"
+            },
+            {
+              "name": "Brand invigoratingScent",
+              "value": "retailerproductdata/customData/invigoratingScent"
+            },
+            {
+              "name": "Brand microbiomeGentle",
+              "value": "retailerproductdata/customData/microbiomeGentle"
+            },
+            {
+              "name": "Brand naturallyDerived",
+              "value": "retailerproductdata/customData/naturallyDerived"
+            },
+            {
+              "name": "Brand no1DermatologistRecommendedBrand",
+              "value": "retailerproductdata/customData/no1DermatologistRecommendedBrand"
+            },
+            {
+              "name": "Brand noSulfateCleansers",
+              "value": "retailerproductdata/customData/noSulfateCleansers"
+            },
+            {
+              "name": "Brand pHbalanced",
+              "value": "retailerproductdata/customData/pHbalanced"
+            },
+            {
+              "name": "Brand refillable",
+              "value": "retailerproductdata/customData/refillable"
+            },
+            {
+              "name": "Brand sensitiveSkin",
+              "value": "retailerproductdata/customData/sensitiveSkin"
+            },
+            {
+              "name": "Brand sulfateFree",
+              "value": "retailerproductdata/customData/sulfateFree"
+            },
+            {
+              "name": "Brand unscented",
+              "value": "retailerproductdata/customData/unscented"
+            },
+            {
+              "name": "Brand zeroParabens",
+              "value": "retailerproductdata/customData/zeroParabens"
+            },
+            {
+              "name": "Brand zeroAlcohol",
+              "value": "retailerproductdata/customData/zeroAlcohol"
+            },
+            {
+              "name": "Brand zeroAluminum",
+              "value": "retailerproductdata/customData/zeroAluminum"
+            },
+            {
+              "name": "Brand recycledPlasticPackaging",
+              "value": "retailerproductdata/customData/recycledPlasticPackaging"
+            },
+            {
+              "name": "Brand developedWithDermatologists",
+              "value": "retailerproductdata/customData/developedWithDermatologists"
+            },
+            {
+              "name": "Brand clinicallyTested",
+              "value": "retailerproductdata/customData/clinicallyTested"
+            },
+            {
+              "name": "Brand scienceBacked",
+              "value": "retailerproductdata/customData/scienceBacked"
+            },
+            {
+              "name": "Brand bioProteinCare",
+              "value": "retailerproductdata/customData/bioProteinCare"
+            },
+            {
+              "name": "Brand invisibleDrySerum",
+              "value": "retailerproductdata/customData/invisibleDrySerum"
+            },
+            {
+              "name": "Brand NaturalCassavaStrach",
+              "value": "retailerproductdata/customData/NaturalCassavaStrach"
+            },
+            {
+              "name": "Brand dermatologistTested",
+              "value": "retailerproductdata/customData/dermatologistTested"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "product-info",
+      "components": [
+        "product-info-item"
+      ]
+    }
+  ]
+}

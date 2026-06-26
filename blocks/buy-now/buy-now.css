@@ -1,0 +1,133 @@
+.buy-now {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.buy-now-decorated {
+  display: block;
+}
+
+.buy-now-wrapper {
+  width: 100%;
+}
+
+.buy-now-wrapper[data-provider='cartwire'] {
+  display: block;
+}
+
+.buy-now-wrapper[data-provider='mikmak'] {
+  display: block;
+}
+
+.floating-buynow-selector {
+  display: block;
+}
+
+.card-button-wrapper {
+  width: 100%;
+  display: block;
+}
+
+.cw-script {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.cc-smart-product-button {
+  width: 100%;
+}
+
+.cc-smart-product-button.hide {
+  display: none;
+}
+
+/* MikMak pop-in button */
+.btn-primary.mikmak,
+.swn-tag-wtb-btn.cmp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  width: auto;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+}
+
+.btn-primary.mikmak:hover,
+.swn-tag-wtb-btn.cmp-button:hover {
+  background: #333;
+}
+
+.btn-primary.mikmak:focus-visible,
+.swn-tag-wtb-btn.cmp-button:focus-visible {
+  outline: 2px solid currentcolor;
+  outline-offset: 2px;
+}
+
+/* MikMak in-page embed */
+.embed[data-mm-wtbid] {
+  width: 100%;
+}
+
+/* Product listing / cards */
+.product-list .buy-now-wrapper,
+.product-list-wrapper .buy-now-wrapper,
+.product-card .buy-now-wrapper,
+.product-card-wrapper .buy-now-wrapper {
+  margin-top: 12px;
+}
+
+/* Related product cards */
+.related-product .buy-now-wrapper,
+.related-products .buy-now-wrapper,
+.related-product-wrapper .buy-now-wrapper,
+.related-product-card .buy-now-wrapper {
+  margin-top: 12px;
+}
+
+/* Carousel cards */
+.product-carousel .buy-now-wrapper,
+.carousel .buy-now-wrapper {
+  margin-top: 12px;
+}
+
+/* Make CTA full width inside cards */
+.product-list .btn-primary.mikmak,
+.product-list-wrapper .btn-primary.mikmak,
+.product-card .btn-primary.mikmak,
+.product-card-wrapper .btn-primary.mikmak,
+.related-product .btn-primary.mikmak,
+.related-products .btn-primary.mikmak,
+.related-product-wrapper .btn-primary.mikmak,
+.related-product-card .btn-primary.mikmak,
+.product-carousel .btn-primary.mikmak,
+.carousel .btn-primary.mikmak {
+  width: 100%;
+}
+
+/* Same for CartWire container in cards */
+.product-list .cc-smart-product-button,
+.product-list-wrapper .cc-smart-product-button,
+.product-card .cc-smart-product-button,
+.related-product .cc-smart-product-button,
+.related-products .cc-smart-product-button,
+.related-product-wrapper .cc-smart-product-button,
+.product-carousel .cc-smart-product-button,
+.carousel .cc-smart-product-button {
+  width: 100%;
+}
+
+.btn-primary.mikmak, .swn-tag-wtb-btn.cmp-button , .btn-primary.mikmak:hover, .swn-tag-wtb-btn.cmp-button:hover{
+  background: var(--primary-color);
+}

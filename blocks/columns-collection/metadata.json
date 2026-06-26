@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-collection",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-08T12:13:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.dove.com/uk/home.html",
+    "originPage": "Dove UK Homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "product-collection",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "branding column + product grid column",
+    "buttonCount": 0,
+    "imageCount": 5
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product collection showcases",
+      "split layout with branding and products",
+      "promotional collection displays"
+    ],
+    "notSuitableFor": [
+      "simple text columns",
+      "comparison layouts",
+      "FAQ side-by-side"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/uk/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-08T12:13:00.000Z"
+  }
+}

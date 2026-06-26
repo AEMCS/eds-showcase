@@ -1,0 +1,91 @@
+{
+  "definitions": [
+    {
+      "title": "Buy Now",
+      "id": "buy-now",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Buy Now",
+              "model": "buy-now"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+  {
+    "id": "buy-now",
+    "fields": [
+      {
+        "component": "select",
+        "name": "provider",
+        "label": "Provider",
+        "valueType": "string",
+        "options": [
+          { "name": "MikMak", "value": "mikmak" },
+          { "name": "CartWire", "value": "cartwire" }
+        ],
+        "attributes": {
+          "data-provider": "{value}"
+        }
+      },
+      {
+        "component": "select",
+        "name": "mikMakExperience",
+        "label": "MikMak Experience",
+        "valueType": "string",
+        "options": [
+          { "name": "Pop In", "value": "popIn" },
+          { "name": "In Page", "value": "inPage" }
+        ],
+        "attributes": {
+          "data-mikmakexperience": "{value}"
+        }
+      },
+      {
+        "component": "select",
+        "name": "cartwireExperience",
+        "label": "CartWire Experience",
+        "valueType": "string",
+        "options": [
+          { "name": "Popup", "value": "popup" },
+          { "name": "Inline", "value": "inline" }
+        ],
+        "attributes": {
+          "data-cartwireexperience": "{value}"
+        }
+      },
+      {
+        "component": "text",
+        "name": "buyNowTitle",
+        "label": "Buy Now Title",
+        "valueType": "string",
+        "attributes": {
+          "data-buynowtitle": "{value}"
+        }
+      },
+      {
+        "component": "checkbox",
+        "name": "disableBuyNow",
+        "label": "Disable Buy Now",
+        "valueType": "boolean",
+        "attributes": {
+          "data-disablebuynow": "{value}"
+        }
+      }
+    ]
+  }
+],
+  "filters": [
+    {
+      "id": "section",
+      "components": [
+        "buy-now"
+      ]
+    }
+  ]
+}

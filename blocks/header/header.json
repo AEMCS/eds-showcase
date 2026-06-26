@@ -1,0 +1,214 @@
+{
+    "brand": "showcase",
+    "locale": "en_US",
+    "header": {
+        "sections": [
+            {
+                "type": "container",
+                "componentPath": "/root/container",
+                "sectionInfo": {
+                    "sling:resourceType": "unilever/components/container",
+                    "resourceType": "jpg",
+                    "renditionType": "Big size",
+                    "sections": [
+                        {
+                            "type": "container",
+                            "componentPath": "/root/container/container_copy_copy",
+                            "sectionInfo": {
+                                "sling:resourceType": "unilever/components/container",
+                                "resourceType": "jpg",
+                                "renditionType": "Big size",
+                                "sections": [
+                                    {
+                                        "type": "text",
+                                        "componentPath": "/root/container/container_copy_copy/text",
+                                        "sectionInfo": {
+                                            "anonymousText": "<p>Skip to :</p>\r\n"
+                                        }
+                                    },
+                                    {
+                                        "type": "button",
+                                        "componentPath": "/root/container/container_copy_copy/button_copy_1685186362",
+                                        "sectionInfo": {
+                                            "sling:resourceType": "unilever/components/button/v2/button",
+                                            "jcr:title": "Main Content",
+                                            "linkURL": "#container-main-content",
+                                            "linkTarget": "_self",
+                                            "accessibilityLabel": "Skip to Main content",
+                                            "linkOverlay": "false"
+                                        }
+                                    },
+                                    {
+                                        "type": "button",
+                                        "componentPath": "/root/container/container_copy_copy/button_copy",
+                                        "sectionInfo": {
+                                            "sling:resourceType": "unilever/components/button/v2/button",
+                                            "jcr:title": "Footer",
+                                            "linkURL": "#showcase-page-footer",
+                                            "linkTarget": "_self",
+                                            "accessibilityLabel": "Skip to Footer",
+                                            "linkOverlay": "false"
+                                        }
+                                    },
+                                    {
+                                        "type": "button",
+                                        "componentPath": "/root/container/container_copy_copy/button",
+                                        "sectionInfo": {
+                                            "sling:resourceType": "unilever/components/button/v2/button",
+                                            "jcr:title": "Search",
+                                            "linkURL": "#globalSearch",
+                                            "linkTarget": "_self",
+                                            "accessibilityLabel": "Skip to search button",
+                                            "linkOverlay": "false"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "button",
+                            "componentPath": "/root/container/button",
+                            "sectionInfo": {
+                                "sling:resourceType": "unilever/components/button/v2/button",
+                                "icon": "my_icon",
+                                "linkTarget": "_self",
+                                "accessibilityLabel": "Main Navigation",
+                                "linkOverlay": "false"
+                            }
+                        },
+                        {
+                            "type": "tabimage",
+                            "componentPath": "/root/container/tabimage",
+                            "sectionInfo": {
+                                "sling:resourceType": "unilever/components/tabimage",
+                                "breakpoints": "320",
+                                "textBreakpointOptions": "320",
+                                "imageFromPageImage": "true",
+                                "overrideGlobal": "true",
+                                "resourceType": "jpg",
+                                "advancedResizeOption": "adjustheight",
+                                "renditionType": "Header_TabImage_BrandLogo",
+                                "enableMobileAsset": "false",
+                                "alt": "Unilever Logo Navigate To Home Page",
+                                "tabId": "1286053",
+                                "linkURL": "/content/showcase/us/en/home",
+                                "openNewTab": "sametab",
+                                "displayPopupTitle": "true",
+                                "mobileresourceType": "jpg",
+                                "titleValueFromDAM": "true",
+                                "isDecorative": "false",
+                                "disableLazyLoading": "true",
+                                "displayBrandLogoClickable": "false"
+                            }
+                        },
+                        {
+                            "type": "globalnavigation",
+                            "componentPath": "/root/container/globalnavigation",
+                            "sectionInfo": {
+                                "sling:resourceType": "unilever/components/globalnavigation",
+                                "enableGlobalNavV1": "true",
+                                "accessibilityLabel": "main",
+                                "enableNavigationV2": "true",
+                                "styleVariant": "true",
+                                "textIsRich": "true",
+                                "enableHighlighting": "true",
+                                "sections": [
+                                    {
+                                        "type": "navigationlinks",
+                                        "componentPath": "/root/container/globalnavigation/item_1729153926931",
+                                        "sectionInfo": {
+                                            "manualLinks": {},
+                                            "cq:panelTitle": "Products",
+                                            "navLinkUrl": "/products"
+                                        }
+                                    },
+                                    {
+                                        "type": "navigationlinks",
+                                        "componentPath": "/root/container/globalnavigation/item_1729237224139",
+                                        "sectionInfo": {
+                                            "manualLinks": {},
+                                            "cq:panelTitle": "Recipes",
+                                            "navLinkUrl": "/recipes"
+                                        }
+                                    },
+                                    {
+                                        "type": "navigationlinks",
+                                        "componentPath": "/root/container/globalnavigation/item_1729762245059",
+                                        "sectionInfo": {
+                                            "manualLinks": {},
+                                            "cq:panelTitle": "Articles",
+                                            "navLinkUrl": "/article"
+                                        }
+                                    },
+                                    {
+                                        "type": "container",
+                                        "componentPath": "/root/container/globalnavigation/container_1318774953",
+                                        "sectionInfo": {
+                                            "sling:resourceType": "unilever/components/container",
+                                            "cq:panelTitle": "Campaigns",
+                                            "navLinkUrl": "/content/showcase/us/en/home/campaign-page"
+                                        }
+                                    },
+                                    {
+                                        "type": "container",
+                                        "componentPath": "/root/container/globalnavigation/container_233750209",
+                                        "sectionInfo": {
+                                            "sling:resourceType": "unilever/components/container",
+                                            "cq:panelTitle": "Contact Us",
+                                            "navLinkUrl": "/content/showcase/us/en/home/contact-us"
+                                        }
+                                    },
+                                    {
+                                        "type": "navigationlinks",
+                                        "componentPath": "/root/container/globalnavigation/item_1726642720439",
+                                        "sectionInfo": {
+                                            "manualLinks": {},
+                                            "cq:panelTitle": "Sign Up",
+                                            "navLinkUrl": "/secure/sign-up"
+                                        }
+                                    },
+                                    {
+                                        "type": "navigationlinks",
+                                        "componentPath": "/root/container/globalnavigation/item_1747123381526",
+                                        "sectionInfo": {
+                                            "manualLinks": {},
+                                            "cq:panelTitle": "Components",
+                                            "navLinkUrl": "/components-library"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "searchinput",
+                            "componentPath": "/root/container/searchinput",
+                            "sectionInfo": {
+                                "sling:resourceType": "unilever/components/searchinput",
+                                "searchHeadingText": "Hello, what are you looking for?",
+                                "searchResultPageType": "global",
+                                "id": "globalSearch",
+                                "enableFilterSearch": "false",
+                                "quickSuggestionKeywords": [
+                                    "Organic",
+                                    "Zero Salt",
+                                    "Sustainability"
+                                ],
+                                "minCharToAutoSuggest": "2",
+                                "searchInputPlaceholderText": "Type something here...",
+                                "searchLabelText": "Search"
+                            }
+                        },
+                        {
+                            "type": "embed",
+                            "componentPath": "/root/container/embed",
+                            "sectionInfo": {
+                                "sling:resourceType": "unilever/components/embed",
+                                "html": "<link class=\"deferred-styles\" rel=\"stylesheet\" data-href=\"https://headless-stage-aemcs.unileversolutions.com/login-widget/WHITELABEL-v2/en-GB/ul-login.css\"> \r\n<script type=\"module\" src=\"https://headless-stage-aemcs.unileversolutions.com/login-widget/WHITELABEL-v2/en-GB/ul-login.esm.js?pn=noCache10\" nonce=\"Nzg5MzY3\" defer></script>\r\n<ullogin-user-me brand=\"WHITELABEL\" locale=\"en-GB\"\r\n\tjsondataurl=\"https://headless-stage-aemcs.unileversolutions.com/login-widget/WHITELABEL-v2/en-GB/layout/layout-userme.json\"\r\n\tlogin-page-url=\"/us/en/secure/login.html\"\r\n\tchange-password-url=\"/us/en/secure/change-password.html\"\r\n\tedit-profile-url=\"/us/en/secure/edit-profile.html\"\r\n\tuser-favourite=\"/us/en/secure/favourite-articles.html\"\r\n\tfavourite-products=\"/us/en/secure/favourite-products.html\"\r\n\tfavourite-recipes=\"/us/en/secure/favourite-recipe.html\"\r\n\tmy-profile-url=\"/us/en/secure/my-profile.html\" redirect=\"true\"> \r\n</ullogin-user-me>"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

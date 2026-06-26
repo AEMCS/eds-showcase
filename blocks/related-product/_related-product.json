@@ -1,0 +1,186 @@
+{
+  "definitions": [
+    {
+      "title": "Related Product",
+      "id": "related-product",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Related Product",
+              "model": "related-product"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "related-product",
+      "fields": [
+        {
+          "component": "tab",
+          "name": "basicTab",
+          "label": "Basic"
+        },
+        {
+          "component": "richtext",
+          "name": "title",
+          "value": "",
+          "label": "Title",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "subtitle",
+          "value": "",
+          "label": "Subtitle",
+          "valueType": "string"
+        },
+        {
+          "component": "boolean",
+          "name": "classes_displayAwards",
+          "label": "Display Product Awards",
+          "valueType": "boolean",
+          "value": false
+        },
+        {
+          "component": "select",
+          "name": "classes_targetProducts",
+          "label": "Target Products to Display",
+          "valueType": "string",
+          "value": "related-products",
+          "options": [
+            { "name": "Related Products", "value": "related-products" },
+            { "name": "Goes Well Products", "value": "goes-well-products" }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes",
+          "label": "Layout Option",
+          "valueType": "string",
+          "value": "list",
+          "options": [
+            { "name": "List", "value": "list" },
+            { "name": "Carousel", "value": "carousel" }
+          ]
+        },
+        {
+          "component": "tab",
+          "name": "responsiveItemsTab",
+          "label": "Responsive Items"
+        },
+        {
+          "component": "select",
+          "name": "classes_carouselMobileItems",
+          "label": "Number of Items on Mobile",
+          "valueType": "string",
+          "value": "carousel-mobile-1",
+          "options": [
+            { "name": "1 item", "value": "carousel-mobile-1" },
+            { "name": "2 items", "value": "carousel-mobile-2" }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_carouselTabletItems",
+          "label": "Number of Items on Tablet",
+          "valueType": "string",
+          "value": "carousel-tablet-2",
+          "options": [
+            { "name": "2 items", "value": "carousel-tablet-2" },
+            { "name": "3 items", "value": "carousel-tablet-3" }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_carouselDesktopItems",
+          "label": "Number of Items on Desktop",
+          "valueType": "string",
+          "value": "carousel-desktop-4",
+          "options": [
+            { "name": "4 items", "value": "carousel-desktop-4" },
+            { "name": "6 items", "value": "carousel-desktop-6" }
+          ]
+        },
+        {
+          "component": "tab",
+          "name": "listSettingsTab",
+          "label": "List Settings"
+        },
+        {
+          "component": "select",
+          "name": "classes_listInitialItems",
+          "label": "Default Number of List Items",
+          "valueType": "string",
+          "value": "list-initial-4",
+          "options": [
+            { "name": "2 items", "value": "list-initial-2" },
+            { "name": "3 items", "value": "list-initial-3" },
+            { "name": "4 items", "value": "list-initial-4" },
+            { "name": "6 items", "value": "list-initial-6" },
+            { "name": "8 items", "value": "list-initial-8" },
+            { "name": "12 items", "value": "list-initial-12" }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_listLoadMoreItems",
+          "label": "Number of Items on Load More",
+          "valueType": "string",
+          "value": "list-load-more-4",
+          "options": [
+            { "name": "2 items", "value": "list-load-more-2" },
+            { "name": "3 items", "value": "list-load-more-3" },
+            { "name": "4 items", "value": "list-load-more-4" },
+            { "name": "6 items", "value": "list-load-more-6" },
+            { "name": "8 items", "value": "list-load-more-8" },
+            { "name": "12 items", "value": "list-load-more-12" }
+          ]
+        },
+        {
+          "component": "tab",
+          "name": "carouselSettingsTab",
+          "label": "Carousel Settings"
+        },
+         {
+          "component": "boolean",
+          "name": "classes_carouselNavigation",
+          "label": "Enable Carousel Navigation",
+          "valueType": "boolean",
+          "value": true
+        },
+        {
+          "component": "boolean",
+          "name": "classes_carouselLoop",
+          "label": "Enable Carousel Loop",
+          "valueType": "boolean",
+          "value": true
+        },
+        {
+          "component": "boolean",
+          "name": "classes_carouselAutoplay",
+          "label": "Enable Carousel Autoplay",
+          "valueType": "boolean",
+          "value": false
+        },
+        {
+          "component": "select",
+          "name": "classes_carouselIndicators",
+          "label": "Carousel Indicators",
+          "valueType": "string",
+          "value": "indicators-count",
+          "options": [
+            { "name": "Count", "value": "indicators-count" },
+            { "name": "Dots", "value": "indicators-dots" },
+            { "name": "None", "value": "indicators-none" }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

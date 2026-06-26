@@ -1,0 +1,41 @@
+.quote-inspirational blockquote {
+  margin: 0 auto;
+  padding: 0 24px;
+  max-width: 900px;
+}
+
+@media (width >= 900px) {
+  .quote-inspirational blockquote {
+    padding: 0 32px;
+  }
+}
+
+.quote-inspirational blockquote .quote-inspirational-quotation {
+  font-size: 120%;
+}
+
+.quote-inspirational blockquote .quote-inspirational-quotation > :first-child {
+  text-indent: -0.5ch;
+}
+
+.quote-inspirational blockquote .quote-inspirational-quotation p:first-child::before,
+.quote-inspirational blockquote .quote-inspirational-quotation p:last-child::after {
+  line-height: 0;
+}
+
+.quote-inspirational blockquote .quote-inspirational-quotation p:first-child::before {
+  content: '\201C';
+}
+
+.quote-inspirational blockquote .quote-inspirational-quotation p:last-child::after {
+  content: '\201D';
+}
+
+.quote-inspirational blockquote .quote-inspirational-attribution {
+  text-align: right;
+}
+
+.quote-inspirational blockquote .quote-inspirational-attribution p:first-child::before {
+  content: '\2014';
+  padding-right: 0.5ch;
+}

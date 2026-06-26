@@ -1,0 +1,39 @@
+{
+  "variantName": "carousel-launches",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-05-08T12:13:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.dove.com/uk/home.html",
+    "originPage": "Dove UK Homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "grey",
+    "density": "compact",
+    "purpose": "collection-launches",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + text link",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "new product collection showcases",
+      "brand collection carousels",
+      "image + label card carousels"
+    ],
+    "notSuitableFor": [
+      "hero-style full-width carousels",
+      "text-heavy story carousels",
+      "testimonial sliders"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/uk/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-08T12:13:00.000Z"
+  }
+}

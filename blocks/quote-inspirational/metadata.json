@@ -1,0 +1,39 @@
+{
+  "variantName": "quote-inspirational",
+  "baseBlock": "quote",
+  "version": "1.0.0",
+  "created": "2026-05-08T12:13:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.dove.com/uk/home.html",
+    "originPage": "Dove UK Homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "inspirational-quote",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "eyebrow text + quote + attribution",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "inspirational quote sections",
+      "brand message highlights",
+      "motivational testimonials on dark backgrounds"
+    ],
+    "notSuitableFor": [
+      "customer review quotes",
+      "inline blockquotes within articles",
+      "multi-quote grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/uk/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-08T12:13:00.000Z"
+  }
+}

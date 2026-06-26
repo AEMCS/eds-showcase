@@ -1,0 +1,39 @@
+{
+  "variantName": "carousel-stories",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-05-08T12:13:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.dove.com/uk/home.html",
+    "originPage": "Dove UK Homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "grey",
+    "density": "spacious",
+    "purpose": "campaign-stories",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + category tag + heading + description",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "campaign story carousels",
+      "editorial content sliders",
+      "news/article carousels with descriptions"
+    ],
+    "notSuitableFor": [
+      "simple image galleries",
+      "hero banner carousels",
+      "product card carousels"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/uk/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-08T12:13:00.000Z"
+  }
+}

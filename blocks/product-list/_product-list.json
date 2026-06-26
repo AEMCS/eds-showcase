@@ -1,0 +1,176 @@
+{
+  "definitions": [
+    {
+      "title": "Product-list",
+      "id": "product-list",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Product-list",
+              "model": "product-list"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "product-list",
+      "fields": [
+        {
+          "component": "tab",
+          "name": "contentTab",
+          "label": "Content"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "heading",
+          "label": "Heading",
+          "value": ""
+        },
+        {
+          "component": "select",
+          "name": "classes",
+          "label": "Layout Style",
+          "valueType": "string",
+          "value": "list",
+          "options": [
+            { "name": "List", "value": "list" },
+            { "name": "Slider", "value": "slider" }
+          ]
+        },
+        {
+          "component": "tab",
+          "name": "listTab",
+          "label": "List Settings"
+        },
+        {
+          "component": "select",
+          "name": "classes_listInitialItems",
+          "label": "Default Number of List Items",
+          "valueType": "string",
+          "value": "list-initial-4",
+          "options": [
+            { "name": "2 items", "value": "list-initial-2" },
+            { "name": "3 items", "value": "list-initial-3" },
+            { "name": "4 items", "value": "list-initial-4" },
+            { "name": "6 items", "value": "list-initial-6" },
+            { "name": "8 items", "value": "list-initial-8" },
+            { "name": "12 items", "value": "list-initial-12" }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_listLoadMoreItems",
+          "label": "Number of Items on Load More",
+          "valueType": "string",
+          "value": "list-load-more-4",
+          "options": [
+            { "name": "2 items", "value": "list-load-more-2" },
+            { "name": "3 items", "value": "list-load-more-3" },
+            { "name": "4 items", "value": "list-load-more-4" },
+            { "name": "6 items", "value": "list-load-more-6" },
+            { "name": "8 items", "value": "list-load-more-8" },
+            { "name": "12 items", "value": "list-load-more-12" }
+          ]
+        },
+        {
+          "component": "tab",
+          "name": "layoutTab",
+          "label": "Responsive Items"
+        },
+        {
+          "component": "select",
+          "name": "classes_carouselMobileItems",
+          "label": "Number of Items on Mobile",
+          "valueType": "string",
+          "value": "carousel-mobile-1",
+          "options": [
+            { "name": "1 item", "value": "carousel-mobile-1" },
+            { "name": "2 items", "value": "carousel-mobile-2" }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_carouselTabletItems",
+          "label": "Number of Items on Tablet",
+          "valueType": "string",
+          "value": "carousel-tablet-2",
+          "options": [
+            { "name": "1 item", "value": "carousel-tablet-1" },
+            { "name": "2 items", "value": "carousel-tablet-2" },
+            { "name": "3 items", "value": "carousel-tablet-3" }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_carouselDesktopItems",
+          "label": "Number of Items on Desktop",
+          "valueType": "string",
+          "value": "carousel-desktop-4",
+          "options": [
+            { "name": "1 item", "value": "carousel-desktop-1" },
+            { "name": "2 items", "value": "carousel-desktop-2" },
+            { "name": "3 items", "value": "carousel-desktop-3" },
+            { "name": "4 items", "value": "carousel-desktop-4" }
+          ]
+        },
+        {
+          "component": "tab",
+          "name": "sliderTab",
+          "label": "Slider Settings"
+        },
+        {
+          "component": "select",
+          "name": "classes_carouselNavigation",
+          "label": "Carousel Navigation",
+          "valueType": "string",
+          "value": "carousel-navigation",
+          "options": [
+            { "name": "Show", "value": "carousel-navigation" },
+            { "name": "Hide", "value": "carousel-no-navigation" }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_carouselIndicators",
+          "label": "Carousel Indicators",
+          "valueType": "string",
+          "value": "indicators-count",
+          "options": [
+            { "name": "Count", "value": "indicators-count" },
+            { "name": "Dots", "value": "indicators-dots" },
+            { "name": "None", "value": "indicators-none" }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_carouselLoop",
+          "label": "Carousel Loop",
+          "valueType": "string",
+          "value": "carousel-loop",
+          "options": [
+            { "name": "Enabled", "value": "carousel-loop" },
+            { "name": "Disabled", "value": "carousel-no-loop" }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_carouselAutoplay",
+          "label": "Carousel Autoplay",
+          "valueType": "string",
+          "value": "carousel-no-autoplay",
+          "options": [
+            { "name": "Disabled", "value": "carousel-no-autoplay" },
+            { "name": "Enabled", "value": "carousel-autoplay" }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

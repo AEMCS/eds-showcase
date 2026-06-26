@@ -1,0 +1,261 @@
+{
+  "definitions": [
+    {
+      "title": "Product Media Gallery",
+      "id": "product-media-gallery",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "product-media-gallery",
+              "model": "product-media-gallery",
+              "filter": "product-media-gallery"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "product-media-gallery",
+      "fields": [
+        {
+          "component": "tab",
+          "name": "layoutTab",
+          "label": "Layout"
+        },
+        {
+          "component": "select",
+          "name": "classes_layout",
+          "label": "Gallery Layout",
+          "tab": "layoutTab",
+          "value": "horizontal-view",
+          "options": [
+            {
+              "name": "Horizontal",
+              "value": "horizontal-view"
+            },
+            {
+              "name": "Vertical",
+              "value": "vertical-view"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_thumbnails",
+          "label": "Show Thumbnails",
+          "tab": "layoutTab",
+          "value": "show-thumbnails",
+          "options": [
+            {
+              "name": "Yes",
+              "value": "show-thumbnails"
+            },
+            {
+              "name": "No",
+              "value": "hide-thumbnails"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_single_asset",
+          "label": "Show only first asset",
+          "tab": "layoutTab",
+          "value": "show-all-assets",
+          "options": [
+            {
+              "name": "No",
+              "value": "show-all-assets"
+            },
+            {
+              "name": "Yes",
+              "value": "single-asset-only"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_carousel_min",
+          "label": "Minimum items to enable carousel",
+          "tab": "layoutTab",
+          "value": "carousel-min-1",
+          "options": [
+            {
+              "name": "1",
+              "value": "carousel-min-1"
+            },
+            {
+              "name": "2",
+              "value": "carousel-min-2"
+            },
+            {
+              "name": "3",
+              "value": "carousel-min-3"
+            },
+            {
+              "name": "4",
+              "value": "carousel-min-4"
+            },
+            {
+              "name": "5",
+              "value": "carousel-min-5"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_zoom",
+          "label": "Enable Image Zoom",
+          "tab": "layoutTab",
+          "value": "enable-zoom",
+          "options": [
+            {
+              "name": "Yes",
+              "value": "enable-zoom"
+            },
+            {
+              "name": "No",
+              "value": "disable-zoom"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_zoom_button",
+          "label": "Show Zoom Button",
+          "tab": "layoutTab",
+          "value": "show-zoom-button",
+          "options": [
+            {
+              "name": "Yes",
+              "value": "show-zoom-button"
+            },
+            {
+              "name": "No",
+              "value": "hide-zoom-button"
+            }
+          ]
+        },
+        {
+          "component": "tab",
+          "name": "videoTab",
+          "label": "Video Settings"
+        },
+        {
+          "component": "select",
+          "name": "classes_video_provider",
+          "label": "Video Provider",
+          "tab": "videoTab",
+          "value": "video-html",
+          "options": [
+            {
+              "name": "HTML5 Video",
+              "value": "video-html"
+            },
+            {
+              "name": "YouTube",
+              "value": "video-youtube"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_video_autoplay",
+          "label": "Enable Autoplay",
+          "tab": "videoTab",
+          "value": "video-no-autoplay",
+          "options": [
+            {
+              "name": "No",
+              "value": "video-no-autoplay"
+            },
+            {
+              "name": "Yes",
+              "value": "video-autoplay"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_video_loop",
+          "label": "Enable Loop",
+          "tab": "videoTab",
+          "value": "video-no-loop",
+          "options": [
+            {
+              "name": "No",
+              "value": "video-no-loop"
+            },
+            {
+              "name": "Yes",
+              "value": "video-loop"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_video_controls",
+          "label": "Disable Video Controls",
+          "tab": "videoTab",
+          "value": "video-controls",
+          "options": [
+            {
+              "name": "Show Controls",
+              "value": "video-controls"
+            },
+            {
+              "name": "Hide Controls",
+              "value": "video-no-controls"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_video_mute",
+          "label": "Enable Mute",
+          "tab": "videoTab",
+          "value": "video-muted",
+          "options": [
+            {
+              "name": "Yes",
+              "value": "video-muted"
+            },
+            {
+              "name": "No",
+              "value": "video-unmuted"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_video_overlay",
+          "label": "Display Video in Overlay",
+          "tab": "videoTab",
+          "value": "video-inline",
+          "options": [
+            {
+              "name": "Inline",
+              "value": "video-inline"
+            },
+            {
+              "name": "Overlay",
+              "value": "video-overlay"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "product-media-gallery",
+      "components": [
+        "product-media-gallery"
+      ]
+    }
+  ]
+}
